@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .account-container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        .account-container h1 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .account-container input[type="text"],
+        .account-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .account-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .account-container button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="account-container">
+        <h1>Create Account</h1>
+        <input type="text" id="new-username" placeholder="Username">
+        <input type="password" id="new-password" placeholder="Password">
+        <input type="password" id="confirm-password" placeholder="Confirm Password">
+        <p class="error" id="error-message"></p>
+        <button id="create-account-btn">Create Account</button>
+    </div>
+
+    <script>
+        document.getElementById('create-account-btn').onclick = function() {
+            const username = document.getElementById('new-username').value;
+            const password = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (!username || !password || !confirmPassword) {
+                document.getElementById('error-message').textContent = "All fields are required.";
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById('error-message').textContent = "Passwords do not match.";
+                return;
+            }
+
+            // Store user credentials in localStorage for simplicity
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            alert("Account created successfully!");
+
+            // Redirect to login page
+            window.location.href = "login-page.html";
+        };
+    </script>
+</body>
+</html>
