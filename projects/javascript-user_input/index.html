@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input</title>
+</head>
+<body>
+    <h1>User Input Example</h1>
+    
+    <label for="username">Name:</label>
+    <input type="text" id="username">
+    <button id="submit-btn">Submit</button>
+    <button id="reset-btn">Reset</button>
+
+    <p id="user-greet"></p>
+
+    <script>
+        document.getElementById("submit-btn").onclick = function() {
+            let username = document.getElementById("username").value;
+            document.getElementById("user-greet").textContent = `Hello ${username}`;
+        };
+
+        document.getElementById("reset-btn").onclick = function() {
+            document.getElementById("username").value = "";
+            document.getElementById("user-greet").textContent = "";
+        };
+    </script>
+</body>
+</html>
