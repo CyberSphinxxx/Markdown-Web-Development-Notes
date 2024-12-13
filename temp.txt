@@ -1,0 +1,30 @@
+web-dev-notes/
+│
+├── README.md          # Overview of your notes and a guide for navigation.
+├── HTML/
+│   ├── Basics.md      # Introduction, tags, attributes, basic structure.
+│   ├── Forms.md       # Forms, inputs, validation.
+│   ├── Semantics.md   # Semantic elements, accessibility.
+│   ├── Advanced.md    # Custom elements, Shadow DOM.
+│
+├── CSS/
+│   ├── Basics.md      # Selectors, properties, box model.
+│   ├── Layout.md      # Flexbox, Grid, positioning.
+│   ├── Animations.md  # Transitions, keyframes, performance tips.
+│   ├── Advanced.md    # Preprocessors, custom properties, best practices.
+│
+├── JavaScript/
+│   ├── Basics.md      # Variables, data types, loops, functions.
+│   ├── DOM.md         # DOM manipulation, events.
+│   ├── ES6+.md        # Modern syntax, promises, async/await.
+│   ├── Advanced.md    # Web APIs, patterns, performance.
+│
+├── Tools/
+│   ├── Git.md         # Commands, workflows, tips.
+│   ├── VSCode.md      # Shortcuts, extensions for web development.
+│   ├── BrowserDev.md  # Browser developer tools.
+│
+├── Misc/
+│   ├── Resources.md   # Useful links, blogs, videos, courses.
+│   ├── Interview.md   # Common questions and answers for web development.
+│   ├── Tips.md        # Productivity tips, common pitfalls.
